@@ -1,37 +1,37 @@
 const memories = [
 
 {
-image:"images/photo1.jpeg",
+image:"photo1.jpeg",
 title:"Unforgettable ❤️ ",
 text:"Every moment with you is a beautiful memory that I treasure forever."
 },
 
 {
-image:"images/photo2.jpeg",
+image:"photo2.jpeg",
 title:"Your Smile 😊",
 text:"Your smile brightens day of my life."
 },
 
 {
-image:"images/photo3.jpeg",
+image:"photo3.jpeg",
 title:"Best Moments 💕",
 text:"I wish every day could be as wonderful as the moments we've shared."
 },
 
 {
-image:"images/photo4.jpeg",
+image:"photo4.jpeg",
 title:"Forever Together 🌸",
 text:"Distance, time, and everything else fade when I think of you.But still i will miss your presence every time."
 },
 
 {
-image:"images/photo5.jpeg",
+image:"photo5.jpeg",
 title:"My Favorite Persons ❤️",
 text:"You make ordinary moments feel extraordinary."
 },
 
 {
-image:"images/photo6.jpeg",
+image:"photo6.jpeg",
 title:"Happy Friendship Day❤️ ",
 text:"May this day bring you endless happiness, laughter, success, and love. You deserve the very best."
 }
