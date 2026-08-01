@@ -1,0 +1,250 @@
+/*=========================================
+            CAKE PAGE
+=========================================*/
+
+#cakePage{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(135deg,#ffd6ea,#ffc3d9);
+
+    overflow:hidden;
+}
+
+/* Container */
+
+.cakeContainer{
+
+    text-align:center;
+
+    width:100%;
+
+    animation:fadeUp 1s ease;
+
+}
+
+/* Title */
+
+.cakeTitle{
+
+    font-size:55px;
+
+    color:white;
+
+    text-shadow:0 4px 15px rgba(0,0,0,.25);
+
+}
+
+.cakeSubTitle{
+
+    color:white;
+
+    font-size:24px;
+
+    margin-top:15px;
+
+    margin-bottom:60px;
+
+}
+
+/* Cake */
+
+.cake{
+
+    position:relative;
+
+    width:260px;
+
+    margin:auto;
+
+}
+
+/* Layers */
+
+.layer{
+
+    border-radius:20px;
+
+    margin:auto;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.18);
+
+}
+
+.top{
+
+    width:180px;
+
+    height:55px;
+
+    background:#ff9fc9;
+
+}
+
+.middle{
+
+    width:220px;
+
+    height:65px;
+
+    background:#ff74ae;
+
+    margin-top:8px;
+
+}
+
+.bottom{
+
+    width:260px;
+
+    height:75px;
+
+    background:#ff4d94;
+
+    margin-top:8px;
+
+}
+
+/* Candles */
+
+.candles{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    margin-bottom:5px;
+
+}
+
+.candle{
+
+    width:12px;
+
+    height:50px;
+
+    background:white;
+
+    border-radius:5px;
+
+    position:relative;
+
+}
+
+/* Flame */
+
+.flame{
+
+    position:absolute;
+
+    width:16px;
+
+    height:22px;
+
+    background:gold;
+
+    border-radius:50% 50% 50% 50%;
+
+    left:-2px;
+
+    top:-18px;
+
+    animation:flicker .25s infinite alternate;
+
+    box-shadow:0 0 20px orange;
+
+}
+
+@keyframes flicker{
+
+    from{
+
+        transform:scale(1) rotate(-2deg);
+
+    }
+
+    to{
+
+        transform:scale(.8) rotate(2deg);
+
+    }
+
+}
+
+/* Blow Button */
+
+#blowBtn{
+
+    margin-top:60px;
+
+    width:260px;
+
+    height:65px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:linear-gradient(45deg,#ff2d75,#ff6ca8);
+
+    color:white;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#blowBtn:hover{
+
+    transform:scale(1.08);
+
+}
+
+/* Birthday Text */
+
+#birthdayBlast{
+
+    margin-top:50px;
+
+    font-size:60px;
+
+    color:white;
+
+    opacity:0;
+
+    transform:scale(.5);
+
+    text-shadow:0 0 25px hotpink;
+
+}
+
+/* Animation */
+
+@keyframes fadeUp{
+
+    from{
+
+        transform:translateY(40px);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+}

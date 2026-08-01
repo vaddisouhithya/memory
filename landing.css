@@ -1,0 +1,270 @@
+/* ==========================================
+        LANDING PAGE
+========================================== */
+
+#landingPage{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    overflow:hidden;
+
+}
+#screen{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:visible;
+
+    pointer-events:none;
+
+    transition:
+
+    opacity .8s ease,
+
+    visibility .8s ease;
+
+}
+
+/* Music Button */
+
+#musicBtn{
+
+    position:absolute;
+
+    top:30px;
+
+    right:30px;
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    border:none;
+
+    background:rgba(255,255,255,.25);
+
+    backdrop-filter:blur(15px);
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    z-index:100;
+
+}
+
+#musicBtn:hover{
+
+    transform:scale(1.1) rotate(15deg);
+
+}
+
+/* Main Card */
+
+.glass{
+
+    text-align:center;
+
+    animation:cardEnter 1.2s ease;
+
+}
+
+@keyframes cardEnter{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.glass h3{
+
+    margin-bottom:20px;
+
+    color:white;
+
+}
+
+.glass h1{
+
+    color:white;
+
+    text-shadow:0 0 20px hotpink;
+
+}
+
+.glass h2{
+
+    margin:15px 0;
+
+}
+
+.glass p{
+
+    margin:30px 0;
+
+}
+
+/* Start Button */
+
+#startBtn{
+
+    padding:18px 45px;
+
+    border-radius:50px;
+
+    background:linear-gradient(45deg,#ff2d75,#ff87b7);
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(255,45,117,.4);
+
+}
+
+#startBtn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 20px 40px rgba(255,45,117,.5);
+
+}
+
+/* Floating Hearts */
+
+.heart{
+
+    position:absolute;
+
+    bottom:-60px;
+
+    font-size:25px;
+
+    animation:heartFloat linear forwards;
+
+    pointer-events:none;
+
+}
+
+@keyframes heartFloat{
+
+    from{
+
+        transform:translateY(0);
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:translateY(-120vh);
+
+        opacity:0;
+
+    }
+
+}
+
+/* Mouse Glow */
+
+#cursorGlow{
+
+    position:fixed;
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.12);
+
+    filter:blur(50px);
+
+    pointer-events:none;
+
+    transform:translate(-50%,-50%);
+
+    z-index:2;
+
+}
+
+/* Stars */
+
+.star{
+
+    position:absolute;
+
+    color:white;
+
+    opacity:.8;
+
+    animation:twinkle 2s infinite alternate;
+
+}
+
+@keyframes twinkle{
+
+    from{
+
+        opacity:.3;
+
+        transform:scale(.8);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1.3);
+
+    }
+
+}

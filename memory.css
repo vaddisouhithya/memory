@@ -1,0 +1,89 @@
+.photoFrame{
+
+    width:320px;
+
+    margin:35px auto;
+
+    padding:18px;
+
+    background:white;
+
+    border-radius:12px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+
+    transform:rotate(-2deg);
+
+    transition:.4s;
+
+}
+
+.photoFrame:hover{
+
+    transform:rotate(0deg) scale(1.04);
+
+}
+
+.photoFrame img{
+
+    width:100%;
+
+    height:auto;
+
+    object-fit:contain;
+
+    border-radius:8px;
+
+}
+
+.memoryControls{
+
+    margin-top:35px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+.memoryControls button{
+
+    width:170px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#ff2d75;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.memoryControls button:hover{
+
+    transform:scale(1.05);
+
+}
+
+#memoryCount{
+
+    color:white;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+}

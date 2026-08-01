@@ -1,0 +1,498 @@
+/* ==========================================
+   Ashuuu Birthday Website
+   Global Styles
+========================================== */
+
+/* Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap');
+
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Root Colors */
+
+:root{
+
+    --primary:#ff4f87;
+    --secondary:#ff85b5;
+    --accent:#ffd6e8;
+
+    --white:#ffffff;
+    --black:#111111;
+
+    --glass:rgba(255,255,255,.18);
+
+    --border:rgba(255,255,255,.25);
+
+    --shadow:0 20px 50px rgba(0,0,0,.25);
+
+    --gradient1:#ff9a9e;
+    --gradient2:#fad0c4;
+    --gradient3:#fad0ff;
+    --gradient4:#fbc2eb;
+
+}
+
+/* Scroll */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+/* Body */
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    width:100%;
+    height:100vh;
+
+    overflow:hidden;
+
+    position:relative;
+
+    color:white;
+
+    background:linear-gradient(
+        -45deg,
+        var(--gradient1),
+        var(--gradient2),
+        var(--gradient3),
+        var(--gradient4)
+    );
+
+    background-size:400% 400%;
+
+    animation:bgAnimation 18s ease infinite;
+
+}
+
+/* Animated Background */
+
+@keyframes bgAnimation{
+
+    0%{
+
+        background-position:0% 50%;
+
+    }
+
+    50%{
+
+        background-position:100% 50%;
+
+    }
+
+    100%{
+
+        background-position:0% 50%;
+
+    }
+
+}
+
+/* Decorative Glow */
+
+body::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+    height:350px;
+
+    top:-120px;
+    left:-120px;
+
+    border-radius:50%;
+
+    background:#ff6ea8;
+
+    filter:blur(140px);
+
+    opacity:.5;
+
+}
+
+body::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+    height:350px;
+
+    bottom:-140px;
+    right:-120px;
+
+    border-radius:50%;
+
+    background:#ffd86f;
+
+    filter:blur(140px);
+
+    opacity:.4;
+
+}
+
+/* Section */
+
+section{
+
+    width:100%;
+    height:100vh;
+
+    position:absolute;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    top:0;
+    left:0;
+
+}
+
+/* Hide Screen */
+
+/*==========================================
+        SCREEN SYSTEM
+==========================================*/
+
+.screen{
+
+    position:absolute;
+
+    top: 0;
+
+    left: 0;
+
+    inset:0;
+
+    display:none;
+
+    width: 100%;
+
+    height: 100vh;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
+
+    transition:
+
+    opacity .8s ease,
+
+    visibility .8s ease;
+
+}
+
+.screen.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+    pointer-events:auto;
+
+    display: flex;
+
+}
+
+/* Glass Card */
+
+.glass{
+
+    width:520px;
+
+    padding:55px;
+
+    background:var(--glass);
+
+    border:1px solid var(--border);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:35px;
+
+    box-shadow:var(--shadow);
+
+}
+
+/* Titles */
+
+h1{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:72px;
+
+}
+
+h2{
+
+    font-size:42px;
+
+}
+
+h3{
+
+    font-size:22px;
+
+    font-weight:500;
+
+}
+
+/* Paragraph */
+
+p{
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+/* Button */
+
+button{
+
+    cursor:pointer;
+
+    border:none;
+
+    outline:none;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+/* Romantic Button */
+
+.primaryBtn{
+
+    padding:18px 45px;
+
+    border-radius:50px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:white;
+
+    background:linear-gradient(
+        45deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    transition:.35s;
+
+}
+
+.primaryBtn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 35px rgba(255,79,135,.35);
+
+}
+
+/* Floating Container */
+
+#particles{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:1;
+
+}
+
+/* Fade Animation */
+
+.fadeIn{
+
+    animation:fadeIn .8s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Scale Animation */
+
+.scaleIn{
+
+    animation:scaleIn .7s ease;
+
+}
+
+@keyframes scaleIn{
+
+    from{
+
+        transform:scale(.7);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+#hearts{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:1;
+
+}
+
+.floatingHeart{
+
+    position:absolute;
+
+    bottom:-50px;
+
+    animation:heartFloat linear forwards;
+
+}
+
+@keyframes heartFloat{
+
+    from{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:translateY(-120vh) rotate(360deg);
+
+        opacity:0;
+
+    }
+
+}
+#endingPage{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(135deg,#ff8cc6,#ffd8eb);
+
+}
+
+.endingCard{
+
+    text-align:center;
+
+    width:800px;
+
+}
+
+.endingCard h1{
+
+    font-size:65px;
+
+    color:white;
+
+}
+
+.endingCard h2{
+
+    color:white;
+
+    margin:30px;
+
+}
+
+.endingCard p{
+
+    color:white;
+
+    font-size:25px;
+
+    line-height:1.7;
+
+}
+
+.bigHeart{
+
+    font-size:120px;
+
+    margin-top:40px;
+
+    animation:heartbeat 1s infinite;
+
+}
+
+@keyframes heartbeat{
+
+    50%{
+
+        transform:scale(1.2);
+
+    }
+
+}

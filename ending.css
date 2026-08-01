@@ -1,0 +1,266 @@
+#endingPage{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(135deg,#ff9ec7,#ffcce3,#ffeaf4);
+
+    overflow:hidden;
+}
+
+.endingCard{
+
+    width:750px;
+
+    padding:50px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.22);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:35px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.2);
+
+    animation:floatCard 5s ease-in-out infinite;
+}
+
+@keyframes floatCard{
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+}
+
+#endingTitle{
+
+    font-size:52px;
+
+    color:#ff2d75;
+
+    margin-bottom:20px;
+
+    font-family:'Dancing Script',cursive;
+}
+
+.endingCard h2{
+
+    color:#fff;
+
+    margin-bottom:25px;
+}
+
+.endingCard p{
+
+    color:white;
+
+    line-height:1.8;
+
+    font-size:20px;
+}
+
+/*======================================
+POLAROID PHOTO
+=======================================*/
+
+.polaroid{
+
+    width:320px;
+
+    background:white;
+
+    padding:18px 18px 70px;
+
+    border-radius:8px;
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.28);
+
+    transform:rotate(-5deg);
+
+    position:relative;
+
+    margin:40px auto;
+
+    transition:.4s;
+
+}
+
+.polaroid:hover{
+
+    transform:rotate(0deg) scale(1.05);
+
+}
+
+.polaroid img{
+
+    width:100%;
+
+    height:320px;
+
+    object-fit:cover;
+
+    border-radius:4px;
+
+    display:block;
+
+}
+
+.polaroidCaption{
+
+    position:absolute;
+
+    bottom:18px;
+
+    width:100%;
+
+    left:0;
+
+    text-align:center;
+
+    font-size:22px;
+
+    font-family:'Dancing Script',cursive;
+
+    color:#ff2d75;
+
+}
+
+
+.endingCard h3{
+
+    margin-top:20px;
+
+    color:white;
+
+    font-size:30px;
+
+    font-family:'Dancing Script',cursive;
+}
+
+#restartBtn{
+
+    margin-top:35px;
+
+    width:250px;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:white;
+
+    color:#ff2d75;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+#restartBtn:hover{
+
+    transform:scale(1.08);
+}
+/* Decorative Tape */
+
+.tape{
+
+    width:90px;
+
+    height:30px;
+
+    background:rgba(255,182,193,.8);
+
+    position:absolute;
+
+    top:-12px;
+
+    z-index:2;
+
+    opacity:.9;
+
+}
+
+.tapeLeft{
+
+    left:25px;
+
+    transform:rotate(-18deg);
+
+}
+
+.tapeRight{
+
+    right:25px;
+
+    transform:rotate(18deg);
+
+}
+.heart{
+
+    position:absolute;
+
+    font-size:28px;
+
+    animation:floatHeart 3s ease-in-out infinite;
+
+}
+
+.heart1{
+
+    left:-25px;
+
+    top:40px;
+
+}
+
+.heart2{
+
+    right:-20px;
+
+    top:130px;
+
+}
+
+.heart3{
+
+    right:25px;
+
+    bottom:60px;
+
+}
+
+@keyframes floatHeart{
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+}
+.polaroid{
+
+    animation:glow 3s ease-in-out infinite;
+
+}
+
+@keyframes glow{
+
+    50%{
+
+        box-shadow:
+
+            0 25px 55px rgba(255,105,180,.35);
+
+    }
+
+}

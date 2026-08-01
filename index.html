@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Friendship Day ❤️</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- GSAP -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+
+    <!-- Confetti -->
+
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+
+    <!-- Typed JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/landing.css">
+
+    <link rel="stylesheet" href="css/question.css">
+
+    <link rel="stylesheet" href="css/envelope.css">
+
+    <link rel="stylesheet" href="css/pin.css">
+
+    <link rel="stylesheet" href="css/cake.css">
+
+    <link rel="stylesheet" href="css/letter.css">
+
+    <link rel="stylesheet" href="css/memory.css">
+
+    <link rel="stylesheet" href="css/ending.css">
+
+</head>
+
+<body>
+
+    <!-- Floating Background -->
+
+    <div id="particles"></div>
+
+    <!-- Loading Screen -->
+
+    <section id="loadingScreen" class="screen active">
+
+        <div class="loaderCard">
+
+            <div class="heartLoader">
+
+                ❤️
+
+            </div>
+
+            <h2>Preparing Something Magical...</h2>
+
+            <div class="progress">
+
+                <div id="progressBar"></div>
+
+            </div>
+
+            <p id="loadingText">
+
+                Please Wait...
+
+            </p>
+
+        </div>
+
+    </section>
+
+     <!-- Landing Page -->
+
+    <section id="landingPage" class="screen">
+
+        <button id="musicBtn">
+
+            <i class="fa-solid fa-music"></i>
+
+        </button>
+
+        <div class="glass">
+
+            <h3>✨ A Special Surprise ✨</h3>
+
+            <h1>Happy Friendship Day</h1>
+
+            <h2>nikki and harsha ❤️</h2>
+
+            <p>
+
+                Every heartbeat of mine whispers your names.
+
+                Today is all about celebrating the most precious persons in my life.
+
+            </p>
+
+            <button id="startBtn">
+
+                🎁 Start Surprise
+
+            </button>
+
+        </div>
+
+    </section>
+      <!-- ==========================================
+        ENVELOPE SCREEN
+========================================== -->
+
+<section id="envelopePage" class="screen">
+
+    <div class="night"></div>
+
+    <div class="envelopeWrapper">
+
+        <div class="glowCircle"></div>
+
+        <div class="envelope">
+
+            <div class="envelopeTop"></div>
+
+            <div class="letter">
+
+                <h2>💖</h2>
+
+                <h3>For Nikki & Harsha</h3>
+
+                <p>
+
+                    Someone has prepared something
+                    very special for you...
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <p class="clickText">
+
+            Click the envelope ❤️
+
+        </p>
+
+    </div>
+
+</section>
+<!-- ===========================
+        PIN SCREEN
+=========================== -->
+
+<section id="pinPage" class="screen">
+
+    <div class="pinCard">
+
+        <div class="heartLock">
+
+            ❤️
+
+        </div>
+
+        <h2>
+
+            Only For Nikki & Harsha
+
+        </h2>
+
+        <p>
+
+            Enter pin ❤️
+
+        </p>
+
+        <div id="pinDots">
+
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+        <div id="pinValue"></div>
+
+        <div class="keypad">
+
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+
+            <button id="deleteKey">
+
+                ⌫
+
+            </button>
+
+            <button>0</button>
+
+            <button id="okKey">
+
+                ❤️
+
+            </button>
+
+        </div>
+
+        <p id="pinError"></p>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+                QUESTION PAGE
+========================================== -->
+<section id="questionPage" class="screen">
+
+    <div class="questionCard">
+
+        <div class="giftIcon">🎁</div>
+
+        <h1>Wanna see what's inside?</h1>
+
+        <p>I made something with lots of love just for you ❤️</p>
+
+        <div class="questionButtons">
+
+            <button id="yesBtn">YES ❤️</button>
+
+            <button id="noBtn">NO 😢</button>
+
+        </div>
+
+        <p id="sadMessage"></p>
+
+    </div>
+
+</section>
+<!-- ==========================================
+                CAKE PAGE
+========================================== -->
+
+<section id="cakePage" class="screen">
+
+    <div class="cakeContainer">
+
+        <h1 class="cakeTitle">
+            🎂 Let's see together ❤️
+        </h1>
+
+        <p class="cakeSubTitle">
+            Blow the candles ✨
+        </p>
+
+        <!-- Cake -->
+
+        <div class="cake">
+
+            <!-- Candles -->
+
+            <div class="candles">
+
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+
+            </div>
+
+            <!-- Layers -->
+
+            <div class="layer top"></div>
+
+            <div class="layer middle"></div>
+
+            <div class="layer bottom"></div>
+
+        </div>
+
+        <button id="blowBtn">
+
+            💨 Blow the Candles
+
+        </button>
+
+        <h2 id="birthdayBlast">
+
+            🎉 HAPPY FRIENDSHIP DAY ❤️
+
+        </h2>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+            MEMORY PAGE
+========================================== -->
+
+<section id="memoryPage" class="screen">
+
+    <div class="memoryCard">
+
+        <h1>💕 Our Beautiful Memories 💕</h1>
+
+        <div class="photoFrame">
+
+            <img
+                id="memoryImage"
+                src="images/photo1.jpeg"
+                alt="Memory">
+
+        </div>
+
+        <h2 id="memoryTitle"></h2>
+
+        <p id="memoryText"></p>
+
+        <div class="memoryControls">
+
+            <button id="prevMemoryBtn">
+
+                ◀ Previous
+
+            </button>
+
+            <span id="memoryCount">
+
+                1 / 6
+
+            </span>
+
+            <button id="nextMemoryBtn">
+
+                Next ▶
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+            LETTER PAGE (CLEAN CARD)
+========================================== -->
+
+<section id="letterPage" class="screen">
+
+    <div class="letterCard">
+
+        <div class="letterIcon">💌</div>
+
+        <h1>A Special Letter For You ❤️</h1>
+
+        <div class="divider">
+            <span>❤</span>
+        </div>
+
+        <div id="typingText"></div>
+
+        <div class="divider">
+            <span>❤</span>
+        </div>
+
+        <button id="finalBtn">
+            One Last Surprise ❤️
+        </button>
+
+    </div>
+
+</section>
+<section id="endingPage" class="screen">
+
+    <div class="endingCard">
+
+        <h1 id="endingTitle">
+            🎉 Happy Friendship Day ❤️
+        </h1>
+
+        <h2>
+            Thank You For Being The Most Beautiful Part Of My Life
+        </h2>
+
+        <p>
+            I hope this little surprise made you smile.
+            Every page was made with lots of love,
+            just for you.
+        </p>
+
+        <div class="polaroid">
+            <div class="tape tapeLeft"></div>
+<div class="tape tapeRight"></div>
+
+    <img src="images/photo6.jpeg" alt="SSS">
+
+    <div class="polaroidCaption">
+        ❤️ My Favourite Persons ❤️
+    </div>
+    <div class="heart heart1">💖</div>
+<div class="heart heart2">✨</div>
+<div class="heart heart3">💕</div>
+
+</div>
+
+        <h3>
+            ❤️ Forever & Always ❤️
+        </h3>
+
+        <button id="restartBtn">
+            Watch Again 🔄
+        </button>
+
+    </div>
+
+</section>
+<!-- Music -->
+
+    <audio id="bgMusic" loop>
+
+        <source src="music/love.mp3" type="audio/mp3">
+
+    </audio>
+
+
+<script src="js/screenManager.js"></script>
+<script src="js/loader.js"></script>
+<script src="js/envelope.js"></script>
+<script src="js/config.js"></script>
+<script src="js/pin.js"></script>
+<script src="js/app.js"></script>
+<script src="js/music.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/question.js"></script>
+<script src="js/cake.js"></script>
+<script src="js/memory.js"></script>
+<script src="js/letter.js"></script>
+<script src="js/ending.js"></script>
+</body>
+
+</html> 
